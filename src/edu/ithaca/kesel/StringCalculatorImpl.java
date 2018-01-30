@@ -20,14 +20,15 @@ public class StringCalculatorImpl implements StringCalculator {
             return Integer.valueOf(stringArray[0]);
         }
 
+        //If there are 2 numbers in the string
+        String[] stringArray = stringOfNumbers.split(",");
+        int total = 0;
+        for(int i = 0; i < stringArray.length; i++){
+            total += Integer.valueOf(stringArray[i]);
+        }
 
+        return total;
 
-
-
-
-
-
-        return -1;
     }
 
 }
