@@ -10,9 +10,9 @@ class StringCalculatorTest {
     StringCalculator myFunc = new StringCalculatorImpl();
 
     @org.junit.jupiter.api.Test
-    void testStringCalculator(){
+    void testEmptyString() {
 
-    //First Test Case: If no values are in the string.
+        //First Test Case: If no values are in the string.
         //Create an empty string.
         String emptyString = "";
         //Run the add function with the empty string
@@ -20,20 +20,14 @@ class StringCalculatorTest {
         //Test to see if the function returned what should be expected. This case I expect a sum of 0 to be returned.
         assertEquals(0, testInt);
 
+    }
 
+    @org.junit.jupiter.api.Test
+    void testStringWithOneNumber(){
 
     //Second test case: if there is 1 item in the string
         //Create a string of 1 item
             //Make several different strings of 1 item, whee each string has a different item in it.
-        //Testing if " " will result in a sum of 0.
-        String test1 = " ";
-        int testInt1 = myFunc.add(test1);
-        assertEquals(0, testInt1);
-
-        //Testing if "," will return a sum of 0.
-        String test2 = ",";
-        int testInt2 = myFunc.add(test2);
-        assertEquals(0, testInt2);
 
         //Testing if "0" will return sum of 0.
         String test3 = "0";
