@@ -93,5 +93,40 @@ class StringCalculatorTest {
     }
 
 
+    @org.junit.jupiter.api.Test
+    void testForStringWithMultipleNumbers(){
+
+        //Test if 5 numbers work that are the same.
+        String test = "1,1,1,1,1";
+        int testInt = myFunc.add(test);
+        assertEquals(5, testInt);
+
+        //Test if negative and positive numbers work
+        String test2 = "1,-1,1,-1,1,-1";
+        int testInt2 = myFunc.add(test2);
+        assertEquals(0, testInt2);
+
+        //Test if negative and positive numbers work
+        String test3 = "1,1,1,1,-1,-1,-1,-1,-1";
+        int testInt3 = myFunc.add(test3);
+        assertEquals(-1, testInt3);
+
+        //Test if multiple digit numbers work
+        String test4 = "10,100,-10";
+        int testInt4 = myFunc.add(test4);
+        assertEquals(100, testInt4);
+
+        //Test if negative and positive multi-digit numbers work
+        String test5 = "100,-10,-100";
+        int testInt5 = myFunc.add(test5);
+        assertEquals(-10, testInt5);
+
+        //Test if "empty" last digit works
+        String test6 = "1,2,3,";
+        int testInt6 = myFunc.add(test6);
+        assertEquals(6, testInt6);
+
+    }
+
 
 }
