@@ -1,4 +1,7 @@
 package edu.ithaca.kesel;
 
-public class StringCalculator {
+public interface StringCalculator {
+
+    public int add(String stringOfNumbers);
+
 }
