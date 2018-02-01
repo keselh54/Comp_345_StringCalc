@@ -126,6 +126,8 @@ class StringCalculatorTest {
         int testInt6 = myFunc.add(test6);
         assertEquals(6, testInt6);
 
+        //THIS IS MY TEST
+
     }
 
 
